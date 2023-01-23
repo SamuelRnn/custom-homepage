@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --width: 10rem;
+}
+.grid_container {
+  @apply mt-12;
+  width: 84%;
+}
+.links_grid {
+  min-height: 300px;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, var(--width));
+  grid-template-rows: repeat(auto-fill, 3.2rem);
+  gap: 1.2rem;
+}
+.card {
+  width: var(--width);
+  @apply rounded-md shadow-md shadow-[#101010] h-12 px-3 text-ellipsis overflow-hidden flex items-center justify-center;
+}
