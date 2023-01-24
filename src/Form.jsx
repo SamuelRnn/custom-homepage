@@ -3,6 +3,10 @@ import { AnimatePresence, motion } from "framer-motion";
 import { IoMdClose } from "react-icons/io";
 import { v4 as uuid } from "uuid";
 
+function capitalize(str) {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}
+//this component never dismounts
 const Form = ({
   links,
   active,
@@ -41,18 +45,21 @@ const Form = ({
     setForm((data) => ({ ...data, [target.name]: target.value }));
   };
 
+  //create or save
   const postNewLink = (event) => {
     event.preventDefault();
-
     if (form.id) {
       //edit current link
       const newLinks = [...links];
       let link = newLinks.find((l) => l.id === form.id);
-      (link.title = form.title), (link.url = form.url), setLinks(newLinks);
+      link.title = capitalize(form.title);
+      link.url = form.url;
+      setLinks(newLinks);
     } else {
       const newId = uuid();
-      setLinks(links.concat({ ...form, id: newId }));
-      //-------------
+      setLinks(
+        links.concat({ ...form, id: newId, title: capitalize(form.title) })
+      );
     }
     setForm(initialForm);
     setActive(false);
