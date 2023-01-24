@@ -78,7 +78,7 @@ const Clock = () => {
       <motion.div
         initial={{ x: -90, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
-        transition={{ duration: 0.5, delay: 0.2 }}
+        transition={{ duration: 0.5 }}
         className="text-2xl mt-10"
       >
         <span className="font-semibold text-accent">

@@ -19,5 +19,5 @@
 }
 .card {
   width: var(--width);
-  @apply rounded-md shadow-md shadow-[#101010] h-12 px-3 text-ellipsis overflow-hidden flex items-center justify-center;
+  @apply rounded-md shadow-md shadow-[#101010] h-12 px-3 text-ellipsis flex items-center justify-center;
 }
