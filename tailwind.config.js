@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+const { fontFamily } = require('tailwindcss/defaultTheme')
 
 module.exports = {
 	content: [
@@ -14,7 +15,7 @@ module.exports = {
 				},
 			},
 			fontFamily: {
-				main: ['var(--font-didact-gothic)'],
+				main: ['var(--font-didact-gothic)', ...fontFamily.sans],
 			},
 		},
 	},
