@@ -3,25 +3,24 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+	--width: 10rem;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+	@apply scrollbar-thin scrollbar-thumb-yellow-100 scrollbar-track-[#111];
+	background-color: #111;
+}
+
+.tabs-grid {
+	@apply mx-auto;
+	width: 84%;
+	justify-content: center;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, var(--width));
+	grid-template-rows: repeat(auto-fill, 3.2rem);
+	gap: 1.2rem;
+}
+
+.tablink {
+	width: var(--width);
 }
