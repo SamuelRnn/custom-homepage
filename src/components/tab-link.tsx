@@ -6,7 +6,7 @@ import { MdDelete } from 'react-icons/md'
 export default function TabLink() {
 	return (
 		<ContextMenu.Root>
-			<a href="#" draggable>
+			<a href="#" draggable={false}>
 				<ContextMenu.Trigger className="tablink">
 					<div className="whitespace-nowrap w-36 text-ellipsis overflow-hidden select-none">
 						Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias

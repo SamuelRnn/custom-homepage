@@ -5,9 +5,8 @@
 :root {
 	--width: 10rem;
 }
-
-body {
-	@apply scrollbar-thin scrollbar-thumb-yellow-100 scrollbar-track-[#111];
+html {
+	@apply scrollbar-thin scrollbar-thumb-[#202023] scrollbar-track-[#111] scroll-m-20;
 	background-color: #111;
 }
 
@@ -23,7 +22,7 @@ body {
 
 .tablink {
 	width: var(--width);
-	@apply rounded-md shadow-md shadow-main-black/50 h-12 px-3 text-ellipsis flex items-center justify-center bg-main-black/60 backdrop-blur-sm hover:bg-zinc-400/30 hover:shadow-xl hover:shadow-main-black/40 hover:-translate-y-1 transition-all duration-300 ease-out;
+	@apply rounded-md shadow-md shadow-main-black/50 h-12 px-3 text-ellipsis flex items-center justify-center bg-main-black/60 backdrop-blur-sm hover:bg-zinc-200/20 hover:shadow-xl hover:shadow-main-black/40 hover:-translate-y-[3px] transition-all duration-200 ease-out;
 }
 
 .menu-button {
