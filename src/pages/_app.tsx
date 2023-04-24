@@ -35,7 +35,7 @@ export default function App({ Component, pageProps }: AppProps) {
 					<motion.div
 						exit={{ y: '-100%' }}
 						transition={{ type: 'spring', bounce: 0, duration: 1 }}
-						className="bg-[#323234] fixed w-full h-screen z-[1000] loader-screen"
+						className="bg-main-black fixed w-full h-screen z-[1000] loader-screen"
 					/>
 				)}
 			</AnimatePresence>

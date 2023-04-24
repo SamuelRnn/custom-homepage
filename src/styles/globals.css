@@ -6,9 +6,10 @@
 :root {
 	--width: 10rem;
 }
+
 html {
 	@apply scrollbar-thin scrollbar-thumb-[#202023] scrollbar-track-[#111];
-	background-color: #323234;
+	background-color: #111;
 }
 
 .tabs-grid {
@@ -23,11 +24,11 @@ html {
 
 .tablink {
 	width: var(--width);
-	@apply rounded-md shadow-md shadow-main-black/50 h-12 px-3 text-ellipsis flex items-center justify-center bg-main-black/60 backdrop-blur-sm hover:bg-zinc-200/20 hover:shadow-xl hover:shadow-main-black/40 hover:-translate-y-[3px] transition-all duration-200 ease-out;
+	@apply rounded-md shadow-md shadow-main-black/50 h-12 px-3 text-ellipsis flex items-center justify-center bg-main-black/60 backdrop-blur-sm hover: bg-zinc-200/20 hover:shadow-xl hover:shadow-main-black/40 hover:-translate-y-[3px] transition-all duration-200 ease-out;
 }
 
 .menu-button {
-	@apply flex justify-between gap-4 items-center px-3 py-2 rounded cursor-pointer hover:bg-zinc-600/40 transition-colors ease-out duration-150;
+	@apply flex justify-between gap-4 items-center px-3 py-2 rounded cursor-pointer hover: bg-zinc-600/40 transition-colors ease-out duration-150;
 }
 
 .menu-content {
@@ -41,9 +42,11 @@ html {
 .menu-content[data-state='closed'] {
 	animation: fadeOutScale 100ms ease-in;
 }
+
 .dialog-content {
 	animation: contentShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
 }
+
 .dialog-overlay {
 	animation: overlayShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
 }
