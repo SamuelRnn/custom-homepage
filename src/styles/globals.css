@@ -8,7 +8,7 @@
 }
 html {
 	@apply scrollbar-thin scrollbar-thumb-[#202023] scrollbar-track-[#111];
-	background-color: #111;
+	background-color: #323234;
 }
 
 .tabs-grid {
