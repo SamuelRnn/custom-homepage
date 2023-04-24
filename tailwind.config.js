@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 const { fontFamily } = require('tailwindcss/defaultTheme')
 
 module.exports = {
@@ -9,6 +10,9 @@ module.exports = {
 	],
 	theme: {
 		extend: {
+			width: {
+				box: 'min(90%, 400px)',
+			},
 			colors: {
 				main: {
 					black: '#111111',
