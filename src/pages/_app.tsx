@@ -1,4 +1,4 @@
-import background from '../../public/background.webp'
+import background from '../../public/background.avif'
 import '@/styles/globals.css'
 import type { AppProps } from 'next/app'
 import { Didact_Gothic } from 'next/font/google'
@@ -21,7 +21,6 @@ export default function App({ Component, pageProps }: AppProps) {
 			<Image
 				src={background}
 				alt="background image"
-				priority
 				className="h-full w-full fixed object-cover -z-10 scale-105 -left-3"
 				onLoad={() => setVisible(false)}
 			/>

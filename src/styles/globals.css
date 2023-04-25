@@ -31,6 +31,9 @@ html {
 		rgba(176, 47, 71, 1) 100%
 	);
 }
+.t-shadow {
+	text-shadow: #ffffff50 0 5px 20px;
+}
 .tablink {
 	width: var(--width);
 	@apply rounded-md shadow-md shadow-main-black/50 h-12 px-3 text-ellipsis flex items-center justify-center bg-main-black/60 backdrop-blur-sm hover:bg-zinc-200/20 hover:shadow-xl hover:shadow-main-black/40 hover:-translate-y-[2px] transition-all duration-200 ease-out;
