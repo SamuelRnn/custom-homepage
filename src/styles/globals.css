@@ -21,10 +21,19 @@ html {
 	grid-template-rows: repeat(auto-fill, 3.2rem);
 	gap: 1.2rem;
 }
-
+.bg-gradient {
+	background: rgb(50, 41, 66);
+	background: linear-gradient(
+		191deg,
+		rgba(50, 41, 66, 1) 0%,
+		rgba(53, 38, 57, 1) 18%,
+		rgba(61, 34, 50, 1) 31%,
+		rgba(176, 47, 71, 1) 100%
+	);
+}
 .tablink {
 	width: var(--width);
-	@apply rounded-md shadow-md shadow-main-black/50 h-12 px-3 text-ellipsis flex items-center justify-center bg-main-black/60 backdrop-blur-sm hover:bg-zinc-200/20 hover:shadow-xl hover:shadow-main-black/40 hover:-translate-y-[3px] transition-all duration-200 ease-out;
+	@apply rounded-md shadow-md shadow-main-black/50 h-12 px-3 text-ellipsis flex items-center justify-center bg-main-black/60 backdrop-blur-sm hover:bg-zinc-200/20 hover:shadow-xl hover:shadow-main-black/40 hover:-translate-y-[2px] transition-all duration-200 ease-out;
 }
 
 .menu-button {

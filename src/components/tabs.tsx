@@ -4,7 +4,7 @@ import TabLink from './tab-link'
 import { TabsState } from '@/types'
 import { BsPlusLg } from 'react-icons/bs'
 import * as Dialog from '@radix-ui/react-dialog'
-import { getLocalTabs, setLocalTabs } from '@/utils'
+import { getLocalTabs } from '@/utils'
 import dynamic from 'next/dynamic'
 
 function Tabs() {
