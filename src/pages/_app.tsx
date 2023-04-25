@@ -1,10 +1,9 @@
-import background from '../../public/background.avif'
+/* eslint-disable @next/next/no-img-element */
 import '@/styles/globals.css'
 import type { AppProps } from 'next/app'
 import { Didact_Gothic } from 'next/font/google'
 import { motion, AnimatePresence } from 'framer-motion'
-import { useState } from 'react'
-import Image from 'next/image'
+import { useEffect, useState } from 'react'
 
 const didact_gothic = Didact_Gothic({
 	subsets: ['latin'],
@@ -15,14 +14,16 @@ const didact_gothic = Didact_Gothic({
 export default function App({ Component, pageProps }: AppProps) {
 	const [visible, setVisible] = useState(true)
 	const exit = { y: '-100%' }
-
+	useEffect(() => {
+		setVisible(false)
+	}, [])
 	return (
 		<>
-			<Image
-				src={background}
+			<img
+				src="/background.avif"
 				alt="background image"
+				// fill
 				className="h-full w-full fixed object-cover -z-10 scale-105 -left-3"
-				onLoad={() => setVisible(false)}
 			/>
 			<main className={`${didact_gothic.variable} font-main text-zinc-300`}>
 				<Component {...pageProps} />
