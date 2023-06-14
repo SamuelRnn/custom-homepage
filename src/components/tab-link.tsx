@@ -6,6 +6,7 @@ import { Dispatch, SetStateAction } from 'react'
 import { TabsState } from '@/types'
 import * as Dialog from '@radix-ui/react-dialog'
 import { title } from 'process'
+import { setLocalTabs } from '@/utils'
 
 type Props = {
 	tab: TabsState
@@ -27,6 +28,7 @@ export default function TabLink({ setData, setOpen, setTabs, tab, tabs }: Props)
 			1
 		)
 		setTabs(newTabs)
+		setLocalTabs(newTabs)
 	}
 	return (
 		<ContextMenu.Root>

@@ -31,8 +31,12 @@ export default function Form({ data, open, tabs, setOpen, setTabs }: Props) {
 			setLocalTabs(newTabs)
 		} else {
 			newTab.id = uuid()
-			setTabs(state => [...state, newTab])
-			setLocalTabs(newTabs)
+			setTabs(state => {
+				const newTabState = [...state, newTab]
+				setLocalTabs(newTabState)
+
+				return newTabState
+			})
 		}
 		setOpen(false)
 	}
