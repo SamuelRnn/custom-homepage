@@ -6,7 +6,7 @@ export default function Clock() {
 	return (
 		<>
 			<div className="text-center select-none">
-				<h1 className="text-2xl t-shadow">
+				<h1 className="text-2xl">
 					<span>{clock.getGreeting}, </span>
 					Samuel
 				</h1>

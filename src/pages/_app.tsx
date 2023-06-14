@@ -19,12 +19,12 @@ export default function App({ Component, pageProps }: AppProps) {
 	}, [])
 	return (
 		<>
-			<img
+			{/* <img
 				src="/background.avif"
 				alt="background image"
 				// fill
 				className="h-full w-full fixed object-cover -z-10 scale-105 -left-3"
-			/>
+			/> */}
 			<main className={`${didact_gothic.variable} font-main text-zinc-300`}>
 				<Component {...pageProps} />
 			</main>
